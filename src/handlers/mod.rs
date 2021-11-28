@@ -1,5 +1,4 @@
-use actix_web::{Responder, Result};
+mod error_handling;
+pub use error_handling::*;
 
-pub async fn not_found() -> impl Responder {
-    "not found"
-}
+pub mod example;

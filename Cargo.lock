@@ -1221,10 +1221,12 @@ version = "0.1.0"
 dependencies = [
  "actix-web",
  "anyhow",
+ "bytes",
  "clap",
  "log",
  "log4rs",
  "serde",
+ "serde_json",
 ]
 
 [[package]]

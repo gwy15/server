@@ -8,7 +8,7 @@ appenders:
       pattern: "{date(%H:%M:%S%.3f)} [{highlight({level})}] (({target}:{line})) - {message}{n}"
     filters:
       - kind: threshold
-        level: info
+        level: debug
 
   file_appender:
     kind: rolling_file
