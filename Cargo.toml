@@ -1,0 +1,22 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4.0.0-beta.12"
+
+# logs
+log = "0.4.14"
+log4rs = "1.0.0"
+
+# error
+anyhow = "1.0.49"
+
+# serde
+serde = "1.0.130"
+
+# misc
+clap = "3.0.0-beta.5"
