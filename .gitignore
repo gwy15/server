@@ -1,2 +1,7 @@
 /target
 /logs
+/db
+
+config.toml
+
+.env

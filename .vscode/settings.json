@@ -1,0 +1,12 @@
+{
+    "cSpell.words": [
+        "deletable",
+        "insertable",
+        "ormx",
+        "sqlx"
+    ],
+    "rust-analyzer.cargo.features": [
+        "sqlite",
+        "native-tls"
+    ]
+}

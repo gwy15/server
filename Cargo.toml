@@ -3,10 +3,21 @@ name = "server"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = []
+
+sqlite = [ "sqlx/sqlite" ]
+postgres = [ "sqlx/postgres" ]
+mysql = [ "sqlx/mysql" ]
+
+migrate = [ "sqlx/migrate" ]
+
+rustls = [ "sqlx/runtime-actix-rustls" ]
+native-tls = [ "sqlx/runtime-actix-native-tls" ]
 
 [dependencies]
 actix-web = "4.0.0-beta.12"
+tokio = { version = "1.14.0", features = [ "fs" ] }
 
 # logs
 log = "0.4.14"
@@ -18,7 +29,18 @@ anyhow = "1.0.49"
 # serde
 serde = "1.0.130"
 serde_json = "1.0.72"
+toml = "0.5.8"
 
 # misc
 clap = "3.0.0-beta.5"
 bytes = "1.1.0"
+chrono = "0.4.19"
+
+# db
+[dependencies.sqlx]
+version = "0.5.9"
+default-features = false
+features = ["macros", "chrono"]
+# [dependencies.ormx]
+# version = "0.10.0"
+# default-features = false
